@@ -17,7 +17,7 @@ class HttpHelper {
         await http.get(Uri.parse('$movieNightBaseUrl/join-session?code=$code'));
 
     if (response.statusCode == 200) {
-      return jsonDecode(response.body); // Parse response body and return
+      return jsonDecode(response.body); 
     } else {
       throw Exception('Failed to join session');
     }
@@ -27,7 +27,7 @@ static Future<Map<String, dynamic>> getMovieDetails(int movieId) async {
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
-      return jsonDecode(response.body); // Parse response body and return movie details
+      return jsonDecode(response.body);  
     } else {
       throw Exception('Failed to fetch movie details');
     }

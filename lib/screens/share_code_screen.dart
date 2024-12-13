@@ -35,7 +35,14 @@ class _ShareCodeScreenState extends State<ShareCodeScreen> {
         ),
         body: Center(
           child: Column(
-            children: [Text('Code: $code')],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text('Code: $code',
+            style: TextStyle(
+          fontSize: 32,  // Increase font size
+          fontWeight: FontWeight.bold,))
+            ],
+            
+            
           ),
         ));
   }

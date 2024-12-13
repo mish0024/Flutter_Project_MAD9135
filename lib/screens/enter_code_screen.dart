@@ -57,12 +57,13 @@ class _EnterCodeScreenState extends State<EnterCodeScreen> {
       return;
     }
     try {
-      final response = await HttpHelper.joinSession(code); // Assuming an API to join session
+      final response = await HttpHelper.joinSession(code);
+      print('Response from API: ${response.toString()}');
       if (response['status'] == 'success') {
         // Navigate to the movie selection screen
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const MovieSelectionScreen()),
+          MaterialPageRoute(builder: (context) => MovieSelectionScreen()),
         );
       } else {
         setState(() {
