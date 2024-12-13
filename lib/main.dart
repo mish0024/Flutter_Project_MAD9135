@@ -1,4 +1,5 @@
 import 'package:final_project/screens/welcome_screen.dart';
+import 'package:final_project/screens/movie_selection_screen.dart';
 import 'package:final_project/utils/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,8 +16,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: WelcomeScreen(),
+    return  MaterialApp(
+      home: const WelcomeScreen(),
+      routes: {
+        '/movieSelection': (context) => MovieSelectionScreen(),
+      },
     );
   }
 }
